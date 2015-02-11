@@ -11,12 +11,13 @@ import Cocoa
 
 class DrawingView: NSView {
     
+    
     var startYValue:Int = 100
     
     var endYValue:Int = 100
     
-    var startingPoint:NSPoint = NSPoint(x:0, y:0)
-    var endingPoint:NSPoint = NSPoint(x:500, y:0)
+    var startingPoint:NSPoint = NSPoint(x:0, y:5)
+    var endingPoint:NSPoint = NSPoint(x:500, y:5)
 
     
     func DrawingViewTest(){
@@ -34,15 +35,15 @@ class DrawingView: NSView {
         // Drawing code here.
     println("drawrectcode")
         
-        var path = NSBezierPath()
-        
-        
        
         
+        var path = NSBezierPath()
+       
+        path.lineWidth = 5.0
         path.moveToPoint(startingPoint)
         
         path.lineToPoint(endingPoint)
-        
+      
         path.stroke()
         
         

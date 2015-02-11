@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="DrawingView1" destination="RRc-LJ-19o" id="Pl1-Dv-bel"/>
                 <outlet property="leftSlider" destination="uVH-Lp-Cij" id="qgu-Ud-eyu"/>
+                <outlet property="rightSlider" destination="tHP-tv-GyH" id="x3i-je-Gcv"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -682,11 +683,14 @@
                     </customView>
                     <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tHP-tv-GyH">
                         <rect key="frame" x="391" y="41" width="21" height="96"/>
-                        <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="Y2e-Lv-nTY"/>
+                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="5" maxValue="180" doubleValue="5" tickMarkPosition="right" sliderType="linear" id="Y2e-Lv-nTY"/>
+                        <connections>
+                            <action selector="rightSliderSender:" target="Voe-Tx-rLC" id="EgU-pF-WBk"/>
+                        </connections>
                     </slider>
                     <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVH-Lp-Cij">
                         <rect key="frame" x="72" y="41" width="21" height="96"/>
-                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="180" tickMarkPosition="right" sliderType="linear" id="uaN-pG-mlK"/>
+                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="5" maxValue="180" doubleValue="5" tickMarkPosition="right" sliderType="linear" id="uaN-pG-mlK"/>
                         <connections>
                             <action selector="leftSlidersender:" target="Voe-Tx-rLC" id="XpM-dj-F3A"/>
                         </connections>

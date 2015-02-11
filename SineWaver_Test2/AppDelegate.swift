@@ -20,8 +20,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var leftSlider: NSSlider!
     
+    
+
+    @IBOutlet weak var rightSlider: NSSlider!
+    
+    
+    
     @IBAction func leftSlidersender(sender: NSSlider) {
-        
         
         var lSliderVal:Int = (Int(sender.doubleValue))
         println("test")
@@ -29,15 +34,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       
      
         DrawingView1.needsDisplay = true
-        
       
     }
     
-    
-    
-    var startY = Int(0)
-    var endY = Int(0)
-    
+   //**************************************************************
+ 
+    @IBAction func rightSliderSender(sender: NSSlider) {
+        
+        var rSliderVal:Int = (Int(sender.doubleValue))
+        DrawingView1.endingPoint = NSPoint(x: 500, y: (rSliderVal))
+        
+        
+        DrawingView1.needsDisplay = true
+    }
+   
+ //******************************************************************
+//    var startY = Int(10)
+//    var endY = Int(10)
+//    
     
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
@@ -46,8 +60,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
    
     
     println("inside app finished launching loop")
-    leftSlider.integerValue = 0
-    
+    leftSlider.integerValue = 5
+    rightSlider.integerValue = 5
+    DrawingView1.needsDisplay = true
     
         var TestDrawingView = DrawingView()
         TestDrawingView.DrawingViewTest()
