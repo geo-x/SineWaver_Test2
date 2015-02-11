@@ -13,7 +13,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SineWaver_Test2" customModuleProvider="target">
             <connections>
-                <outlet property="DrawingView1" destination="RRc-LJ-19o" id="HIZ-j9-7hJ"/>
+                <outlet property="DrawingView1" destination="RRc-LJ-19o" id="Pl1-Dv-bel"/>
                 <outlet property="leftSlider" destination="uVH-Lp-Cij" id="qgu-Ud-eyu"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -677,13 +677,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RRc-LJ-19o">
-                        <rect key="frame" x="20" y="152" width="440" height="188"/>
-                    </customView>
-                    <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tHP-tv-GyH">
-                        <rect key="frame" x="391" y="41" width="21" height="96"/>
-                        <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="Y2e-Lv-nTY"/>
-                    </slider>
                     <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVH-Lp-Cij">
                         <rect key="frame" x="72" y="41" width="21" height="96"/>
                         <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="uaN-pG-mlK"/>
@@ -691,6 +684,13 @@
                             <action selector="leftSlidersender:" target="Voe-Tx-rLC" id="XpM-dj-F3A"/>
                         </connections>
                     </slider>
+                    <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tHP-tv-GyH">
+                        <rect key="frame" x="391" y="41" width="21" height="96"/>
+                        <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="Y2e-Lv-nTY"/>
+                    </slider>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RRc-LJ-19o" customClass="DrawingView" customModule="SineWaver_Test2">
+                        <rect key="frame" x="20" y="152" width="440" height="188"/>
+                    </customView>
                 </subviews>
             </view>
         </window>

@@ -8,56 +8,79 @@
 
 import Cocoa
 
+
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
-    @IBOutlet weak var DrawingView1: NSView!
+   
+    @IBOutlet weak var DrawingView1: DrawingView!
 
     @IBOutlet weak var leftSlider: NSSlider!
     
     @IBAction func leftSlidersender(sender: NSSlider) {
         
+        
+        var lSliderVal:Int = (Int(sender.doubleValue))
         println("test")
-        var x: Double = sender.doubleValue
-        println("\(Int(x))")
+        DrawingView1.startingPoint = NSPoint(x: 0, y: (lSliderVal))
+      
+     
+        DrawingView1.needsDisplay = true
+        
+      
     }
-   
+    
+    
+    
+    var startY = Int(0)
+    var endY = Int(0)
+    
+    
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
       
+      
+   
+    
+    println("inside app finished launching loop")
+    
+    
+        var TestDrawingView = DrawingView()
+        TestDrawingView.DrawingViewTest()
+        DrawingView1.DrawingViewTest()
         
-     DrawingView1.lockFocus()
+     
         
-        var path = NSBezierPath()
-        
-        var startY = Int(0)
-        var endY = Int(0)
-        var startPoint = NSPoint(x:0, y:(startY))
-        var endingPoint = NSPoint(x:500, y:(endY))
-        
-//        path.moveToPoint(NSPoint(x: 0, y: 0))
+//        DrawingView1.lockFocus()
 //        
-//        path.lineToPoint(NSPoint(x: 500, y:0))
-        
-        path.moveToPoint(startPoint)
-        
-        path.lineToPoint(endingPoint)
-        
-        path.stroke()
-        
-       DrawingView1.unlockFocus()
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    }
+//        var path = NSBezierPath()
+//        
+//        
+//        var startPoint = NSPoint(x:0, y:(startY))
+//        var endingPoint = NSPoint(x:500, y:(endY))
+//        
+//        path.moveToPoint(startPoint)
+//        
+//        path.lineToPoint(endingPoint)
+//        
+//        path.stroke()
+//        
+//        DrawingView1.unlockFocus()
 
+        
+        
+        
+      
+    
+    }// end app finished launching
+
+    
+    
+
+    
     
     
     
