@@ -11,7 +11,7 @@ import Cocoa
 
 class DrawingView: NSView {
     
-    
+// prpoerties
     var startYValue:Int = 100
     
     var endYValue:Int = 100
@@ -19,7 +19,7 @@ class DrawingView: NSView {
     var startingPoint:NSPoint = NSPoint(x:0, y:5)
     var endingPoint:NSPoint = NSPoint(x:500, y:5)
 
-    
+// test message
     func DrawingViewTest(){
         println("this is a method of the DrawingView Class")
     }
@@ -28,7 +28,7 @@ class DrawingView: NSView {
     
     
     
-    
+// override drawRect
     override func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)
 

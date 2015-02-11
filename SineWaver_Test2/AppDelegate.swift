@@ -25,19 +25,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var rightSlider: NSSlider!
     
     
+// action from left slider ***************************************
     
     @IBAction func leftSlidersender(sender: NSSlider) {
         
         var lSliderVal:Int = (Int(sender.doubleValue))
         println("test")
         DrawingView1.startingPoint = NSPoint(x: 0, y: (lSliderVal))
-      
-     
         DrawingView1.needsDisplay = true
       
     }
     
    //**************************************************************
+   //**************************************************************
+    
+    //action from right slider*************************************
  
     @IBAction func rightSliderSender(sender: NSSlider) {
         
@@ -49,58 +51,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
    
  //******************************************************************
-//    var startY = Int(10)
-//    var endY = Int(10)
-//    
+ //******************************************************************
     
+
+// main app delegate loop ******************************************
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
       
       
-   
     
     println("inside app finished launching loop")
+        
+    //Initializartion for fader positions *************************
     leftSlider.integerValue = 5
     rightSlider.integerValue = 5
     DrawingView1.needsDisplay = true
     
         var TestDrawingView = DrawingView()
         TestDrawingView.DrawingViewTest()
-        DrawingView1.DrawingViewTest()
-        
-     
-        
-//        DrawingView1.lockFocus()
-//        
-//        var path = NSBezierPath()
-//        
-//
-//        var startPoint = NSPoint(x:0, y:(startY))
-//        var endingPoint = NSPoint(x:500, y:(endY))
-//        
-//        path.moveToPoint(startPoint)
-//        
-//        path.lineToPoint(endingPoint)
-//        
-//        path.stroke()
-//        
-//        DrawingView1.unlockFocus()
-
-        
-        
-        
-      
+   
     
-    }// end app finished launching
+    }  // app delegate loop
 
     
-    
+//*******************************************************************
 
-    
-    
-    
-    
-    
     
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
