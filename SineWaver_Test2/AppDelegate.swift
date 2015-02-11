@@ -46,6 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
    
     
     println("inside app finished launching loop")
+    leftSlider.integerValue = 0
     
     
         var TestDrawingView = DrawingView()
@@ -58,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        
 //        var path = NSBezierPath()
 //        
-//        
+//
 //        var startPoint = NSPoint(x:0, y:(startY))
 //        var endingPoint = NSPoint(x:500, y:(endY))
 //        

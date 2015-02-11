@@ -15,8 +15,8 @@ class DrawingView: NSView {
     
     var endYValue:Int = 100
     
-    var startingPoint:NSPoint = NSPoint(x:0, y:100)
-    var endingPoint:NSPoint = NSPoint(x:500, y:100)
+    var startingPoint:NSPoint = NSPoint(x:0, y:0)
+    var endingPoint:NSPoint = NSPoint(x:500, y:0)
 
     
     func DrawingViewTest(){
